@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  lighthouse-ci:
+    image: leonyork/lighthouse-ci:${IMAGE_TAG}
+    build:
+      context: .
+      args:
+        - "CYPRESS_VERSION=${CYPRESS_VERSION}"
+        - "LIGHTHOUSECI_VERSION=${LIGHTHOUSECI_VERSION}"
